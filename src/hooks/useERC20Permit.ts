@@ -1,6 +1,6 @@
 import JSBI from 'jsbi'
-import { Percent, CurrencyAmount, Currency, TradeType, Token } from '@uniswap/sdk-core'
-import { Trade as V2Trade } from '@uniswap/v2-sdk'
+import { Percent, CurrencyAmount, Currency, TradeType, Token } from 'xiabing-uniswap-sdk-core'
+import { Trade as V2Trade } from 'xiabing-uniswap-v2-sdk'
 import { Trade as V3Trade } from '@uniswap/v3-sdk'
 import { splitSignature } from 'ethers/lib/utils'
 import { useMemo, useState } from 'react'

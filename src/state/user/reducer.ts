@@ -76,7 +76,23 @@ export const initialState: UserState = {
   userSlippageTolerance: 'auto',
   userSlippageToleranceHasBeenMigratedToAuto: true,
   userDeadline: DEFAULT_DEADLINE_FROM_NOW,
-  tokens: {},
+  tokens: {
+    3: {
+      // @ts-ignore
+      name: 'MBT',
+      // @ts-ignore
+      address: '0xe091490ba97b4def82267c14fe65875d77894182',
+      // @ts-ignore
+      symbol: 'MBT',
+      // @ts-ignore
+      decimals: 18,
+      // @ts-ignore
+      chainId: 3,
+      // @ts-ignore
+      logoURI:
+        'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xaD6D458402F60fD3Bd25163575031ACDce07538D/logo.png',
+    },
+  },
   pairs: {},
   timestamp: currentTimestamp(),
   URLWarningVisible: true,

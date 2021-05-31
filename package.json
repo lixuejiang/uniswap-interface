@@ -56,7 +56,6 @@
     "@uniswap/token-lists": "^1.0.0-beta.19",
     "@uniswap/v2-core": "1.0.0",
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
-    "@uniswap/v2-sdk": "^3.0.0-alpha.2",
     "@uniswap/v3-core": "1.0.0",
     "@uniswap/v3-periphery": "1.0.0",
     "@uniswap/v3-sdk": "^3.0.0-alpha.9",
@@ -117,7 +116,8 @@
     "workbox-expiration": "^6.1.0",
     "workbox-precaching": "^6.1.0",
     "workbox-routing": "^6.1.0",
-    "workbox-strategies": "^6.1.0"
+    "workbox-strategies": "^6.1.0",
+    "xiabing-uniswap-v2-sdk": "^0.0.1"
   },
   "resolutions": {
     "@walletconnect/web3-provider": "1.4.2-rc.2"
@@ -154,5 +154,7 @@
     ]
   },
   "license": "GPL-3.0-or-later",
-  "dependencies": {}
+  "dependencies": {
+    "xiabing-uniswap-sdk-core": "^0.0.1"
+  }
 }

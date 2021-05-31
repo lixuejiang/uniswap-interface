@@ -21,7 +21,7 @@ import { Dots } from '../../components/swap/styleds'
 import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 import { useStakingInfo } from '../../state/stake/hooks'
 import { BIG_INT_ZERO } from '../../constants/misc'
-import { Pair } from '@uniswap/v2-sdk'
+import { Pair } from 'xiabing-uniswap-v2-sdk'
 import { Trans } from '@lingui/macro'
 
 const PageWrapper = styled(AutoColumn)`

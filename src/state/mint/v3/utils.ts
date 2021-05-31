@@ -6,7 +6,7 @@ import {
   encodeSqrtRatioX96,
   TickMath,
 } from '@uniswap/v3-sdk/dist/'
-import { Price, Token } from '@uniswap/sdk-core'
+import { Price, Token } from 'xiabing-uniswap-sdk-core'
 import { tryParseAmount } from 'state/swap/hooks'
 import JSBI from 'jsbi'
 
@@ -40,7 +40,7 @@ export function tryParseTick(
     tick = TickMath.MIN_TICK
   } else {
     // this function is agnostic to the base, will always return the correct tick
-    tick = priceToClosestTick(price)
+    tick = priceToClosestTick(price as any)
   }
 
   return nearestUsableTick(tick, TICK_SPACINGS[feeAmount])

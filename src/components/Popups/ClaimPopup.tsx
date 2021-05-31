@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@uniswap/sdk-core'
+import { CurrencyAmount, Token } from 'xiabing-uniswap-sdk-core'
 import React, { useCallback, useEffect } from 'react'
 import ReactGA from 'react-ga'
 import { X } from 'react-feather'

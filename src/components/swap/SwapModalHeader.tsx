@@ -1,5 +1,5 @@
-import { Currency, Percent, TradeType } from '@uniswap/sdk-core'
-import { Trade as V2Trade } from '@uniswap/v2-sdk'
+import { Currency, Percent, TradeType } from 'xiabing-uniswap-sdk-core'
+import { Trade as V2Trade } from 'xiabing-uniswap-v2-sdk'
 import { Trade as V3Trade } from '@uniswap/v3-sdk'
 import React, { useContext, useState } from 'react'
 import { ArrowDown, AlertTriangle } from 'react-feather'
@@ -123,7 +123,7 @@ export default function SwapModalHeader({
         <TYPE.body color={theme.text2} fontWeight={500} fontSize={14}>
           <Trans>Price</Trans>
         </TYPE.body>
-        <TradePrice price={trade.executionPrice} showInverted={showInverted} setShowInverted={setShowInverted} />
+        <TradePrice price={trade.executionPrice as any} showInverted={showInverted} setShowInverted={setShowInverted} />
       </RowBetween>
 
       <LightCard style={{ padding: '.75rem', marginTop: '0.5rem' }}>

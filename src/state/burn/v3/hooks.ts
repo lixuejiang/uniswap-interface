@@ -1,4 +1,4 @@
-import { CurrencyAmount, Percent, Currency } from '@uniswap/sdk-core'
+import { CurrencyAmount, Percent, Currency } from 'xiabing-uniswap-sdk-core'
 import { Position } from '@uniswap/v3-sdk'
 import { usePool } from 'hooks/usePools'
 import { useActiveWeb3React } from 'hooks/web3'

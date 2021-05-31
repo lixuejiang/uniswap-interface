@@ -1,4 +1,4 @@
-import { Currency, Percent, Price } from '@uniswap/sdk-core'
+import { Currency, Percent, Price } from 'xiabing-uniswap-sdk-core'
 import React, { useContext } from 'react'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'

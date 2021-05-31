@@ -13,7 +13,7 @@ import Circle from '../../assets/images/blue-loader.svg'
 import { useVoteCallback, useUserVotes } from '../../state/governance/hooks'
 import { ExternalLink } from '../../theme/components'
 import { formatCurrencyAmount } from 'utils/formatCurrencyAmount'
-import { CurrencyAmount, Token } from '@uniswap/sdk-core'
+import { CurrencyAmount, Token } from 'xiabing-uniswap-sdk-core'
 import { Trans } from '@lingui/macro'
 
 const ContentWrapper = styled(AutoColumn)`

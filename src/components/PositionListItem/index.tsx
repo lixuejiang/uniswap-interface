@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { HideSmall, MEDIA_WIDTHS, SmallOnly } from 'theme'
 import { PositionDetails } from 'types/position'
-import { WETH9, Price, Token, Percent } from '@uniswap/sdk-core'
+import { WETH9, Price, Token, Percent } from 'xiabing-uniswap-sdk-core'
 import { formatPrice } from 'utils/formatCurrencyAmount'
 import Loader from 'components/Loader'
 import { unwrappedToken } from 'utils/unwrappedToken'
@@ -138,7 +138,9 @@ export function getPriceOrderingFromPositionForUI(position?: Position): {
   const stables = [DAI, USDC, USDT]
   if (stables.some((stable) => stable.equals(token0))) {
     return {
+      // @ts-ignore
       priceLower: position.token0PriceUpper.invert(),
+      // @ts-ignore
       priceUpper: position.token0PriceLower.invert(),
       quote: token0,
       base: token1,
@@ -149,7 +151,9 @@ export function getPriceOrderingFromPositionForUI(position?: Position): {
   const bases = [...Object.values(WETH9), WBTC]
   if (bases.some((base) => base.equals(token1))) {
     return {
+      // @ts-ignore
       priceLower: position.token0PriceUpper.invert(),
+      // @ts-ignore
       priceUpper: position.token0PriceLower.invert(),
       quote: token0,
       base: token1,
@@ -159,7 +163,9 @@ export function getPriceOrderingFromPositionForUI(position?: Position): {
   // if both prices are below 1, invert
   if (position.token0PriceUpper.lessThan(1)) {
     return {
+      // @ts-ignore
       priceLower: position.token0PriceUpper.invert(),
+      // @ts-ignore
       priceUpper: position.token0PriceLower.invert(),
       quote: token0,
       base: token1,
@@ -168,7 +174,9 @@ export function getPriceOrderingFromPositionForUI(position?: Position): {
 
   // otherwise, just return the default
   return {
+    // @ts-ignore
     priceLower: position.token0PriceLower,
+    // @ts-ignore
     priceUpper: position.token0PriceUpper,
     quote: token1,
     base: token0,

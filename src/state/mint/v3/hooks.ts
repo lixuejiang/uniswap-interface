@@ -13,7 +13,7 @@ import {
   TICK_SPACINGS,
   encodeSqrtRatioX96,
 } from '@uniswap/v3-sdk/dist/'
-import { Currency, Token, CurrencyAmount, Price, Rounding } from '@uniswap/sdk-core'
+import { Currency, Token, CurrencyAmount, Price, Rounding } from 'xiabing-uniswap-sdk-core'
 import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useActiveWeb3React } from '../../../hooks/web3'
@@ -156,6 +156,7 @@ export function useV3DerivedMintInfo(
   const invertPrice = Boolean(baseToken && token0 && !baseToken.equals(token0))
 
   // always returns the price with 0 as base token
+  // @ts-ignore
   const price: Price<Token, Token> | undefined = useMemo(() => {
     // if no liquidity use typed value
     if (noLiquidity) {
@@ -196,7 +197,7 @@ export function useV3DerivedMintInfo(
   // used for ratio calculation when pool not initialized
   const mockPool = useMemo(() => {
     if (tokenA && tokenB && feeAmount && price && !invalidPrice) {
-      const currentTick = priceToClosestTick(price)
+      const currentTick = priceToClosestTick(price as any)
       const currentSqrt = TickMath.getSqrtRatioAtTick(currentTick)
       return new Pool(tokenA, tokenB, feeAmount, currentSqrt, JSBI.BigInt(0), currentTick, [])
     } else {

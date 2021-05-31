@@ -4,7 +4,7 @@
 // import { basisPointsToPercent } from 'utils'
 // import { DAI, WBTC } from '../../constants'
 // import Component, { PositionListProps } from './index'
-// import { CurrencyAmount } from '@uniswap/sdk-core'
+// import { CurrencyAmount } from 'xiabing-uniswap-sdk-core'
 // import JSBI from 'jsbi'
 
 // const FEE_BIPS = {

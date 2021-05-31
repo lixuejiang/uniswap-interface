@@ -61,22 +61,21 @@ function useCombinedTokenMapFromUrls(urls: string[] | undefined): TokenAddressMa
   const lists = useAllLists()
   return useMemo(() => {
     if (!urls) return {}
-    return (
-      urls
-        .slice()
-        // sort by priority so top priority goes last
-        .sort(sortByListPriority)
-        .reduce((allTokens, currentUrl) => {
-          const current = lists[currentUrl]?.current
-          if (!current) return allTokens
-          try {
-            return combineMaps(allTokens, listToTokenMap(current))
-          } catch (error) {
-            console.error('Could not show token list due to error', error)
-            return allTokens
-          }
-        }, {})
-    )
+    const tokenList = urls
+      .slice()
+      // sort by priority so top priority goes last
+      .sort(sortByListPriority)
+      .reduce((allTokens, currentUrl) => {
+        const current = lists[currentUrl]?.current
+        if (!current) return allTokens
+        try {
+          return combineMaps(allTokens, listToTokenMap(current))
+        } catch (error) {
+          console.error('Could not show token list due to error', error)
+          return allTokens
+        }
+      }, {})
+    return tokenList
   }, [lists, urls])
 }
 
@@ -97,7 +96,8 @@ export function useInactiveListUrls(): string[] {
 export function useCombinedActiveList(): TokenAddressMap {
   const activeListUrls = useActiveListUrls()
   const activeTokens = useCombinedTokenMapFromUrls(activeListUrls)
-  return combineMaps(activeTokens, TRANSFORMED_DEFAULT_TOKEN_LIST)
+  const data = combineMaps(activeTokens, TRANSFORMED_DEFAULT_TOKEN_LIST)
+  return data
 }
 
 // list of tokens not supported on interface, used to show warnings and prevent swaps and adds

@@ -18,7 +18,7 @@ import { isAddress } from 'ethers/lib/utils'
 import Confetti from '../Confetti'
 import { CardNoise, CardBGImage, CardBGImageSmaller } from '../earn/styled'
 import { useIsTransactionPending } from '../../state/transactions/hooks'
-import { CurrencyAmount, Token } from '@uniswap/sdk-core'
+import { CurrencyAmount, Token } from 'xiabing-uniswap-sdk-core'
 import { shortenAddress } from '../../utils'
 import { Trans } from '@lingui/macro'
 

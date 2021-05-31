@@ -1,4 +1,4 @@
-import { Token, Price } from '@uniswap/sdk-core'
+import { Token, Price } from 'xiabing-uniswap-sdk-core'
 import { tickToPrice } from '@uniswap/v3-sdk'
 
 export function getTickToPrice(
@@ -9,5 +9,6 @@ export function getTickToPrice(
   if (!baseToken || !quoteToken || !tick) {
     return undefined
   }
+  // @ts-ignore
   return tickToPrice(baseToken, quoteToken, tick)
 }

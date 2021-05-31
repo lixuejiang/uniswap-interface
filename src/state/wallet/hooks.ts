@@ -1,4 +1,4 @@
-import { Currency, Token, CurrencyAmount, Ether } from '@uniswap/sdk-core'
+import { Currency, Token, CurrencyAmount, Ether } from 'xiabing-uniswap-sdk-core'
 import JSBI from 'jsbi'
 import { useMemo } from 'react'
 import { UNI } from '../../constants/tokens'

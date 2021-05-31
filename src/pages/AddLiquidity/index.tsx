@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useMemo, useState } from 'react'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, CurrencyAmount, Percent } from '@uniswap/sdk-core'
-import { WETH9 } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount, Percent } from 'xiabing-uniswap-sdk-core'
+import { WETH9 } from 'xiabing-uniswap-sdk-core'
 import { AlertTriangle, AlertCircle } from 'react-feather'
 import ReactGA from 'react-ga'
 import { ZERO_PERCENT } from '../../constants/misc'
@@ -44,7 +44,7 @@ import {
   useV3MintActionHandlers,
   useRangeHopCallbacks,
   useV3DerivedMintInfo,
-} from 'state/mint/v3/hooks'
+} from '../../state/mint/v3/hooks'
 import { FeeAmount, NonfungiblePositionManager } from '@uniswap/v3-sdk'
 import { useV3PositionFromTokenId } from 'hooks/useV3Positions'
 import { useDerivedPositionInfo } from 'hooks/useDerivedPositionInfo'

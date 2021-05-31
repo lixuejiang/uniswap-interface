@@ -3,8 +3,8 @@ import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, AppState } from '../index'
 import { Field, typeInput } from './actions'
-import { Pair } from '@uniswap/v2-sdk'
-import { Currency, Token, Percent, Price, CurrencyAmount } from '@uniswap/sdk-core'
+import { Pair } from 'xiabing-uniswap-v2-sdk'
+import { Currency, Token, Percent, Price, CurrencyAmount } from 'xiabing-uniswap-sdk-core'
 import JSBI from 'jsbi'
 import { PairState, useV2Pair } from '../../hooks/useV2Pairs'
 import { useTotalSupply } from '../../hooks/useTotalSupply'
@@ -206,6 +206,7 @@ export function useDerivedMintInfo(
     pairState,
     currencyBalances,
     parsedAmounts,
+    // @ts-ignore
     price,
     noLiquidity,
     liquidityMinted,

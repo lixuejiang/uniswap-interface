@@ -1,7 +1,6 @@
 import JSBI from 'jsbi'
 import React, { useCallback, useMemo, useState, useEffect, ReactNode } from 'react'
-import { Fraction, Percent, Price, Token, CurrencyAmount, WETH9 } from '@uniswap/sdk-core'
-import { FACTORY_ADDRESS } from '@uniswap/v2-sdk'
+import { Fraction, Percent, Price, Token, CurrencyAmount, WETH9 } from 'xiabing-uniswap-sdk-core'
 import { Redirect, RouteComponentProps } from 'react-router'
 import { Text } from 'rebass'
 import { AutoColumn } from '../../components/Column'
@@ -125,7 +124,7 @@ function V2PairMigration({
   const theme = useTheme()
 
   const pairFactory = useSingleCallResult(pair, 'factory')
-  const isNotUniswap = pairFactory.result?.[0] && pairFactory.result[0] !== FACTORY_ADDRESS
+  const isNotUniswap = pairFactory.result?.[0] && pairFactory.result[0] !== '0xdB343955805c0794AC9445486608365EB01b45A3'
 
   const deadline = useTransactionDeadline() // custom from users settings
   const blockTimestamp = useCurrentBlockTimestamp()
@@ -196,7 +195,7 @@ function V2PairMigration({
   const { onLeftRangeInput, onRightRangeInput } = useV3MintActionHandlers(noLiquidity)
 
   // the v3 tick is either the pool's tickCurrent, or the tick closest to the v2 spot price
-  const tick = pool?.tickCurrent ?? priceToClosestTick(v2SpotPrice)
+  const tick = pool?.tickCurrent ?? priceToClosestTick(v2SpotPrice as any)
   // the price is either the current v3 price, or the price at the tick
   const sqrtPrice = pool?.sqrtRatioX96 ?? TickMath.getSqrtRatioAtTick(tick)
   const position =

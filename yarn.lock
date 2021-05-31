@@ -4331,17 +4331,6 @@
     "@uniswap/lib" "1.1.1"
     "@uniswap/v2-core" "1.0.0"
 
-"@uniswap/v2-sdk@^3.0.0-alpha.2":
-  version "3.0.0-alpha.2"
-  resolved "https://registry.npmjs.org/@uniswap/v2-sdk/-/v2-sdk-3.0.0-alpha.2.tgz"
-  integrity sha512-LkGGZMdJueIIC3OBzgiBMV/1GdZgzTTf2qGEgBAxJUuCSFf5wZQgWNU4KOkoaBrl/FlEctAGSgGh3j3BhWKL5Q==
-  dependencies:
-    "@ethersproject/address" "^5.0.0"
-    "@ethersproject/solidity" "^5.0.0"
-    "@uniswap/sdk-core" "^3.0.0-alpha.3"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-
 "@uniswap/v3-core@1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@uniswap/v3-core/-/v3-core-1.0.0.tgz"
@@ -19981,6 +19970,29 @@ xhr@^2.0.1, xhr@^2.2.0:
     is-function "^1.0.1"
     parse-headers "^2.0.0"
     xtend "^4.0.0"
+
+xiabing-uniswap-sdk-core@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/xiabing-uniswap-sdk-core/-/xiabing-uniswap-sdk-core-0.0.1.tgz#783587cbfeb610f9a795b0a1143c453cb1ed496f"
+  integrity sha512-LXUV7xZv37oXR4c1pY3rvaT6aU3AZPIWpMtxz5Tw7IcpBfwCx868xfudZL/qM/G4CeocD8+1Kb6q1XA/7npwoA==
+  dependencies:
+    "@ethersproject/address" "^5.0.2"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.4"
+    tiny-invariant "^1.1.0"
+    toformat "^2.0.0"
+
+xiabing-uniswap-v2-sdk@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/xiabing-uniswap-v2-sdk/-/xiabing-uniswap-v2-sdk-0.0.1.tgz#4f0fe8b32f078f0989cadd26ffdaef688e487dc8"
+  integrity sha512-2Gg1RQNIs5c1ozjOJQdTzpKAHN17oXD1sldOvJKXTtrSUANGfc/RqLxrKSd+ErELccwG7bVuHVGXmBL3jUKxUg==
+  dependencies:
+    "@ethersproject/address" "^5.0.0"
+    "@ethersproject/solidity" "^5.0.0"
+    "@uniswap/sdk-core" "^3.0.0-alpha.3"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
 
 xml-name-validator@^3.0.0:
   version "3.0.0"

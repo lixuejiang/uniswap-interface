@@ -1,5 +1,5 @@
 import JSBI from 'jsbi'
-import { CurrencyAmount, Token } from '@uniswap/sdk-core'
+import { CurrencyAmount, Token } from 'xiabing-uniswap-sdk-core'
 import { TransactionResponse } from '@ethersproject/providers'
 import { useEffect, useState } from 'react'
 import { UNI } from '../../constants/tokens'
